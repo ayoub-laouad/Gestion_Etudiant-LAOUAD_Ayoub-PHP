@@ -79,7 +79,6 @@ CREATE TABLE IF NOT EXISTS `etudiants` (
 --
 
 INSERT INTO `etudiants` (`ID_Etud`, `Nom_Etud`, `Prenom_Etud`, `Matricule_Etud`, `Email_Etud`, `Login_Etud`, `MP_Etud`, `Role_Etud`, `Sexe_Etud`, `Fil_Etud`, `Niv_Etud`, `AS_Etud`, `Photo_Etud`) VALUES
-(2, 'Laouad', 'Ayoub', 'al245', 'ayoublaouade@m2si.insea', 'ayoub', 'ayoub', 'admin', 'M', 1, 1, 1, 'Diversity_Profil-edited.png'),
 (4, 'Jin Woo', 'Sung', '+ss999', 'sungjinwoo@solo.leveling', 'sung', 'sung', NULL, 'M', 2, 3, 4, 'SungJinWoo.jpg'),
 (5, 'Hae In', 'Cha', 'S151', 'chahaein@solo.leveling', 'hunterChan', 'hunterChan', NULL, 'F', 2, 1, 4, 'ChaHaeIn.jpg');
 
