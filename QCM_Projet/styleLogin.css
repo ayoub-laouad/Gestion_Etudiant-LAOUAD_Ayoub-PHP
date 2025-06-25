@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Style du body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #e2e2e2, #5F8B4C);
+    background-size: cover;
+}
+
+/* Barre de navigation */
+nav {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    margin-right: 10px;
+}
+
+nav .languages {
+    display: flex;
+    align-items: center;
+}
+
+nav .languages img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+nav .languages img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Conteneur principal de la page */
+.container {
+    position: relative;
+    width: 850px;
+    height: 550px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 100px auto 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+}
+
+/* Zone du formulaire de connexion */
+.form-box {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-box h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-box {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 13px 50px 13px 20px;
+    background: #eee;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.input-box input::placeholder {
+    color: #888;
+    font-weight: 400;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #555;
+}
+
+/* Bouton de connexion */
+.btn {
+    width: 100%;
+    height: 48px;
+    background: #3F7D58;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #2F5D48;
+    transform: scale(1.05);
+}
+
+/* Zone de présentation (toggle) */
+.toggle-box {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    width: 60%;
+    background: #3F7D58;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-panel {
+    text-align: center;
+    padding: 20px;
+}
+
+.toggle-panel h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.toggle-panel img {
+    height: 50%;
+    width: auto;
+    margin: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 650px) {
+    .container {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        margin-top: 120px;
+    }
+    .form-box, .toggle-box {
+        width: 100%;
+    }
+    nav {
+        flex-direction: column;
+    }
+}

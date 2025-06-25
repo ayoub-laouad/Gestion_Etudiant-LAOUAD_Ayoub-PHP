@@ -1,0 +1,272 @@
+/* Style général */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 100px auto 20px; /* Ajuster la marge supérieure */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    justify-content: space-evenly;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    margin-right: 10px;
+}
+
+/* Style pour les liens du navbar */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 10px;
+    margin-right: 10px; /* Espacement entre les liens */
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007200;
+}
+/* langues */
+nav .languages {
+    display: flex;
+    align-items: center;
+}
+
+nav .languages img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Input et select */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Tableau des etudiants */
+.Etu_table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    word-wrap: break-word;
+}
+
+.Etu_table th, .Etu_table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.Etu_table td {
+    height: auto;
+}
+
+/* Largeur personnalisée pour chaque colonne */
+.Etu_table th:nth-child(1), .Etu_table td:nth-child(1) { width: 4%; }     /* N° */
+.Etu_table th:nth-child(2), .Etu_table td:nth-child(2) { width: 10%; }    /* Matricule */
+.Etu_table th:nth-child(3), .Etu_table td:nth-child(3) { width: 10%; }    /* Nom */
+.Etu_table th:nth-child(4), .Etu_table td:nth-child(4) { width: 10%; }    /* Prénom */
+.Etu_table th:nth-child(5), .Etu_table td:nth-child(5) { width: 10%; }    /* Année */
+.Etu_table th:nth-child(6), .Etu_table td:nth-child(6) {
+    width: 22%;
+    white-space: normal;
+    word-break: break-word;
+} /* Filière */
+.Etu_table th:nth-child(7), .Etu_table td:nth-child(7) { width: 10%; }    /* Niveau */
+.Etu_table th:nth-child(8), .Etu_table td:nth-child(8) { width: 8%; }     /* Photo */
+.Etu_table th:nth-child(9), .Etu_table td:nth-child(9) { width: 16%; }    /* Actions */
+
+
+.styled-button {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #007200;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 5px;
+    transition: background-color 0.3s ease;
+}
+
+.styled-button:hover {
+    background-color: #005500;
+}
+
+/* Bouton de fichier */
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.file-input-wrapper label {
+    padding: 10px 20px;
+    width: 150px;
+    text-align: center;
+    background-color: #00fd00;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.file-input-wrapper input[type="file"] {
+    font-size: 100px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+
+/* Style pour les Details Model */
+
+.portfolio-modal .modal-content {
+    border-radius: 15px;
+    overflow: hidden; /* Pour que le border-radius s'applique à l'image */
+}
+
+.portfolio-modal-header {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-bottom: none;
+}
+
+.portfolio-modal-title {
+    font-size: 2rem;
+    color: #343a40;
+}
+
+.portfolio-modal-body {
+    padding: 2rem;
+    text-align: center; /* Centrer le contenu */
+}
+
+.portfolio-modal-footer {
+    border-top: none;
+    padding: 1.5rem;
+    justify-content: center; /* Centrer les boutons */
+}
+
+.portfolio-item-header {
+    margin-bottom: 1.5rem;
+}
+
+.student-portfolio-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; /* Pour que l'image remplisse le cercle */
+    border: 5px solid #fff; /* Bordure blanche */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.student-portfolio-name {
+    margin-top: 1rem;
+    font-size: 1.75rem;
+    color: #495057;
+}
+
+.portfolio-item-body p {
+    text-align: left; /* Alignement du texte à gauche dans le corps */
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #6c757d;
+}
+.portfolio-modal-footer .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.portfolio-modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
